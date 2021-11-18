@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Squad6BuildSwitch.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">squad6</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo07group.squad6</a> &gt; <span class="el_source">Squad6BuildSwitch.java</span></div><h1>Squad6BuildSwitch.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.nwmissouri.zoo07group.squad6;
+
+import static edu.nwmissouri.zoo07group.squad6.Squad6CheckFiles.getFileLines;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Map;
+import java.util.TreeMap;
+
+/**
+ *
+ * @author S545411
+ */
+<span class="nc" id="L22">public class Squad6BuildSwitch {</span>
+     private static final String relativePathToPackage = &quot;/src/main/java/edu/nwmissouri/zoo07group&quot;;
+    private static final String nonAnimalsFileString = &quot;SOURCE_NON_ANIMAL_FILES.txt&quot;;
+
+    public static Map&lt;Integer, String&gt; getAllAnimalMap() {
+
+        // find the files that should be excluded
+<span class="nc" id="L29">        ArrayList&lt;String&gt; ignoreList = getNonCustomAnimalFiles();</span>
+
+        // process all found files, outputing custom animal code
+<span class="nc" id="L32">        File fileFolder = new File(getCustomAnimalPackagePathString());</span>
+<span class="nc" id="L33">        String[] filesArray = fileFolder.list();</span>
+<span class="nc" id="L34">        Arrays.sort(filesArray);</span>
+
+        // create local variables for n and animalMap (a data structure)
+<span class="nc" id="L37">        int n = 1;</span>
+        // keep keys in order with TreeMap and be thread safe for deployment
+<span class="nc" id="L39">        Map animalMap = Collections.synchronizedMap(new TreeMap&lt;Integer, String&gt;());</span>
+        
+        // process the list and load the map
+<span class="nc bnc" id="L42" title="All 2 branches missed.">        for (String file : filesArray) {</span>
+<span class="nc bnc" id="L43" title="All 2 branches missed.">            if (!ignoreList.contains(file)) {</span>
+<span class="nc" id="L44">                int fileLength = file.length();</span>
+<span class="nc" id="L45">                int lengthExtension = &quot;.java&quot;.length();</span>
+<span class="nc" id="L46">                int fileNameLength = fileLength - lengthExtension;</span>
+<span class="nc" id="L47">                var justName = file.substring(0, fileNameLength);</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">                if (justName.endsWith(&quot;Group&quot;)) {</span>
+<span class="nc" id="L49">                    var animal = justName.replace(&quot;Group&quot;, &quot;&quot;);</span>
+<span class="nc" id="L50">                   animalMap.put(n++, animal);</span>
+                }
+            }
+        }
+<span class="nc" id="L54">        return animalMap;</span>
+    }
+
+    public static void main(String args[]) throws IOException {
+
+        // find the files that should be excluded
+<span class="nc" id="L60">        ArrayList&lt;String&gt; ignoreList = getNonCustomAnimalFiles();</span>
+<span class="nc" id="L61">        System.out.println(&quot;Ignore these:&quot;);</span>
+<span class="nc" id="L62">        ignoreList.forEach(f -&gt; System.out.println(f));</span>
+
+        // process all found files, outputing custom animal code
+<span class="nc" id="L65">        System.out.println(&quot;From all these in the package:&quot;);</span>
+<span class="nc" id="L66">        File fileFolder = new File(getCustomAnimalPackagePathString());</span>
+<span class="nc" id="L67">        String filesArray[] = fileFolder.list();</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">        for (String s : filesArray) {</span>
+<span class="nc" id="L69">            System.out.println(s);</span>
+        }
+
+<span class="nc" id="L72">        System.out.println(&quot;===============================&quot;);</span>
+<span class="nc" id="L73">        System.out.println(&quot;Generate Custom Animal Switch&quot;);</span>
+<span class="nc" id="L74">        System.out.println(&quot;===============================&quot;);</span>
+<span class="nc" id="L75">        int n = 1;</span>
+<span class="nc bnc" id="L76" title="All 2 branches missed.">        for (String file : filesArray) {</span>
+<span class="nc bnc" id="L77" title="All 2 branches missed.">            if (!ignoreList.contains(file)) {</span>
+<span class="nc" id="L78">                int fileLength = file.length();</span>
+<span class="nc" id="L79">                int lengthExtension = &quot;.java&quot;.length();</span>
+<span class="nc" id="L80">                int fileNameLength = fileLength - lengthExtension;</span>
+<span class="nc" id="L81">                var justName = file.substring(0, fileNameLength);</span>
+<span class="nc bnc" id="L82" title="All 2 branches missed.">                if (justName.endsWith(&quot;Group&quot;)) {</span>
+
+                    // output this:
+                    //case 1 -&gt; {             
+                    //    AardvarkGroup.create();
+                    //    AardvarkGroup.run();
+                    //}
+<span class="nc" id="L89">                    System.out.println(&quot;case &quot; + n++ + &quot; -&gt; {&quot;);</span>
+<span class="nc" id="L90">                    System.out.println(justName + &quot;.create();&quot;);</span>
+<span class="nc" id="L91">                    System.out.println(justName + &quot;.run();&quot;);</span>
+<span class="nc" id="L92">                    System.out.println(&quot;}&quot;);</span>
+                }
+            }
+        }
+
+<span class="nc" id="L97">        System.out.println(&quot;===============================&quot;);</span>
+<span class="nc" id="L98">        System.out.println(&quot;Generate Custom Animal Menu&quot;);</span>
+<span class="nc" id="L99">        System.out.println(&quot;===============================&quot;);</span>
+<span class="nc" id="L100">        n = 1;</span>
+<span class="nc bnc" id="L101" title="All 2 branches missed.">        for (String file : filesArray) {</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">            if (!ignoreList.contains(file)) {</span>
+<span class="nc" id="L103">                int fileLength = file.length();</span>
+<span class="nc" id="L104">                int lengthExtension = &quot;.java&quot;.length();</span>
+<span class="nc" id="L105">                int fileNameLength = fileLength - lengthExtension;</span>
+<span class="nc" id="L106">                var justName = file.substring(0, fileNameLength);</span>
+<span class="nc bnc" id="L107" title="All 2 branches missed.">                if (justName.endsWith(&quot;Group&quot;)) {</span>
+                    // output something like this - but in columns
+                    //System.out.print(&quot;1. Aardvarks&quot;);
+                    //System.out.println(&quot;2. Asps&quot;);
+                    //System.out.println(&quot;3. Bearcats&quot;);
+                    // write code below.....
+                    //System.out.println(&quot;case &quot; + n++ + &quot; -&gt; {&quot;);
+<span class="nc" id="L114">                    var animal = justName.replace(&quot;Group&quot;, &quot;&quot;);</span>
+<span class="nc" id="L115">                    var numberAndAnimal = String.format(&quot;%2d.%-20s&quot;, n, animal);</span>
+<span class="nc" id="L116">                    var quote = &quot;\&quot;&quot;;</span>
+<span class="nc" id="L117">                    var sOpen = &quot;System.out.print(&quot;;</span>
+<span class="nc" id="L118">                    var sOpenLN = &quot;System.out.println(&quot;;</span>
+<span class="nc" id="L119">                    var sClose = &quot;);&quot;;</span>
+<span class="nc" id="L120">                    var strOut = sOpen + quote + numberAndAnimal + quote + sClose;</span>
+<span class="nc" id="L121">                    var strOutLN = sOpenLN + quote + numberAndAnimal + quote + sClose;</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">                    var statement = (n % 4 == 0) ? strOutLN : strOut;</span>
+<span class="nc" id="L123">                    System.out.println(statement);</span>
+<span class="nc" id="L124">                    n++;</span>
+                }
+            }
+        }
+<span class="nc" id="L128">        System.out.println(&quot;===============================&quot;);</span>
+<span class="nc" id="L129">        System.out.println(&quot;Update NUMBER_ANIMAL_TYPES = &quot; + --n);</span>
+<span class="nc" id="L130">        System.out.println(&quot;===============================&quot;);</span>
+
+<span class="nc" id="L132">    }</span>
+
+    /**
+     * Get a list of expected files in the root project directory.
+     *
+     * @return String[] of expected file names
+     */
+    private static ArrayList&lt;String&gt; getNonCustomAnimalFiles() {
+<span class="nc" id="L140">        return getFileLines(nonAnimalsFileString);</span>
+    }
+
+    /**
+     * Get our project package path as a String.
+     *
+     * @return project package String
+     */
+    private static String getCustomAnimalPackagePathString() {
+<span class="nc" id="L149">        Path projectPath = Paths.get(&quot;&quot;).toAbsolutePath();</span>
+<span class="nc" id="L150">        String projectPathString = projectPath.normalize().toString() + relativePathToPackage;</span>
+<span class="nc" id="L151">        System.out.println(projectPathString);</span>
+<span class="nc" id="L152">        return projectPathString;</span>
+    }
+
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

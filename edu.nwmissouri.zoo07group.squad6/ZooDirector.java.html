@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ZooDirector.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">squad6</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo07group.squad6</a> &gt; <span class="el_source">ZooDirector.java</span></div><h1>ZooDirector.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.nwmissouri.zoo07group.squad6;
+
+/**
+ *
+ * @author Vamsi Areti
+ */
+/**
+ * 
+* zoo director extending human
+ */
+
+public class ZooDirector extends Human {
+private int salary;
+    private String location;
+    private  boolean hasfulltime;
+
+    /**
+     *
+     * @return
+     * returns salary
+     */
+    public int getSalary() {
+<span class="nc" id="L27">        return salary;</span>
+    }
+
+    /**
+     *
+     * @param salary
+     * sets salary
+     */
+    public void setSalary(int salary) {
+<span class="nc" id="L36">        this.salary = salary;</span>
+<span class="nc" id="L37">    }</span>
+
+    /**
+     *
+     * @return
+     * returns location
+     */
+    public String getLocation() {
+<span class="nc" id="L45">        return location;</span>
+    }
+
+    /**
+     *
+     * @param location
+     * sets location 
+     */
+    public void setLocation(String location) {
+<span class="nc" id="L54">        this.location = location;</span>
+<span class="nc" id="L55">    }</span>
+
+    /**
+     *
+     * @return
+     * returns ishasSSn
+     */
+    public boolean hasfulltime() {
+<span class="nc" id="L63">        return hasfulltime;</span>
+    }
+
+    /**
+     *
+     * @param hasfulltime
+     * returns has full time
+
+     */
+    public void hasfulltime(boolean hasfulltime) {
+<span class="nc" id="L73">        this.hasfulltime = hasfulltime;</span>
+<span class="nc" id="L74">    }</span>
+
+    /**
+     *
+     * @param name
+     * defines name
+     */
+    public ZooDirector(String name) {
+<span class="fc" id="L82">        super(name);</span>
+<span class="fc" id="L83">    }</span>
+
+    /**
+     *overriding role method
+     */
+    @Override
+    public void role() {
+<span class="fc" id="L90">        System.out.printf(&quot;Directs how the zoo organises the events and all.&quot;);</span>
+<span class="fc" id="L91">    }</span>
+
+    /**
+     * overriding experience method
+     */
+    @Override
+    public void experience() {
+<span class="fc" id="L98">        System.out.printf(&quot;Zoo Director should have lot of experience.&quot;);</span>
+<span class="fc" id="L99">    }</span>
+
+    /**
+     *overriding salary method
+     */
+    @Override
+    public void salary(){
+<span class="fc" id="L106">        System.out.printf(&quot;Zoo Director salary would be 120K dollars&quot;);</span>
+<span class="fc" id="L107">    }</span>
+    /**
+     * creating newPolicies method
+     */
+     public void newEvents(){
+<span class="fc" id="L112">        System.out.printf(&quot;Zoo Director should do direction for new events and all.&quot;);</span>
+<span class="fc" id="L113">    }</span>
+    
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

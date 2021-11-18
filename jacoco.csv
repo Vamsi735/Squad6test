@@ -1,0 +1,38 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+squad6,edu.nwmissouri.zoo07group.squad6,SecurityGroup.new Security() {...},4,0,0,0,1,0,1,0,1,0
+squad6,edu.nwmissouri.zoo07group.squad6,SecurityGroup.new Security() {...},4,0,0,0,1,0,1,0,1,0
+squad6,edu.nwmissouri.zoo07group.squad6,Human.Generation,21,0,0,0,4,0,1,0,1,0
+squad6,edu.nwmissouri.zoo07group.squad6,Doctor.Degree,15,0,0,0,3,0,1,0,1,0
+squad6,edu.nwmissouri.zoo07group.squad6,Squad6Attributes,3,0,0,0,1,0,1,0,1,0
+squad6,edu.nwmissouri.zoo07group.squad6,Squad6CheckFiles,206,0,12,0,55,0,16,0,10,0
+squad6,edu.nwmissouri.zoo07group.squad6,ZoologistGroup,58,0,0,0,18,0,4,0,4,0
+squad6,edu.nwmissouri.zoo07group.squad6,Doctor,29,32,0,0,12,10,7,5,7,5
+squad6,edu.nwmissouri.zoo07group.squad6,SecurityGroup.new Security() {...},4,0,0,0,1,0,1,0,1,0
+squad6,edu.nwmissouri.zoo07group.squad6,Security,21,20,0,0,9,10,6,5,6,5
+squad6,edu.nwmissouri.zoo07group.squad6,Softwaredev,21,20,0,0,9,10,6,5,6,5
+squad6,edu.nwmissouri.zoo07group.squad6,VisitorServiceManager,21,20,0,0,9,10,6,5,6,5
+squad6,edu.nwmissouri.zoo07group.squad6,Zoocoordinator,53,0,0,0,19,0,11,0,11,0
+squad6,edu.nwmissouri.zoo07group.squad6,LegalAdvisor,21,32,0,0,9,10,6,5,6,5
+squad6,edu.nwmissouri.zoo07group.squad6,Squad6BuildSwitch,317,0,22,0,71,0,17,0,6,0
+squad6,edu.nwmissouri.zoo07group.squad6,ZoocoordinatorGroup,56,0,0,0,17,0,4,0,4,0
+squad6,edu.nwmissouri.zoo07group.squad6,LegalAdvisorGroup,58,0,0,0,18,0,4,0,4,0
+squad6,edu.nwmissouri.zoo07group.squad6,ignoreList,3,0,0,0,1,0,1,0,1,0
+squad6,edu.nwmissouri.zoo07group.squad6,Zoologist,21,32,0,0,9,10,6,5,6,5
+squad6,edu.nwmissouri.zoo07group.squad6,Squad6IndexController,101,3,11,0,50,1,17,1,7,1
+squad6,edu.nwmissouri.zoo07group.squad6,GuideGroup,58,0,0,0,18,0,4,0,4,0
+squad6,edu.nwmissouri.zoo07group.squad6,RegistrarGroup,62,0,0,0,20,0,4,0,4,0
+squad6,edu.nwmissouri.zoo07group.squad6,VeterinarianGroup,60,0,0,0,19,0,4,0,4,0
+squad6,edu.nwmissouri.zoo07group.squad6,SecurityGroup,58,0,0,0,18,0,4,0,4,0
+squad6,edu.nwmissouri.zoo07group.squad6,TrainerGroup,58,0,0,0,18,0,4,0,4,0
+squad6,edu.nwmissouri.zoo07group.squad6,Squad6Application,5,3,0,0,2,1,1,1,1,1
+squad6,edu.nwmissouri.zoo07group.squad6,Squad6App,113,0,19,0,54,0,16,0,2,0
+squad6,edu.nwmissouri.zoo07group.squad6,Veterinarian,21,33,0,0,9,12,6,6,6,6
+squad6,edu.nwmissouri.zoo07group.squad6,Trainer,21,29,0,0,9,10,6,5,6,5
+squad6,edu.nwmissouri.zoo07group.squad6,Guide,25,16,0,0,11,8,7,4,7,4
+squad6,edu.nwmissouri.zoo07group.squad6,VisitorServiceManagerGroup,58,0,0,0,18,0,4,0,4,0
+squad6,edu.nwmissouri.zoo07group.squad6,DoctorGroup,58,0,0,0,18,0,4,0,4,0
+squad6,edu.nwmissouri.zoo07group.squad6,Registrar,21,46,0,0,9,14,6,7,6,7
+squad6,edu.nwmissouri.zoo07group.squad6,ZooStaff,27,0,0,0,12,0,10,0,10,0
+squad6,edu.nwmissouri.zoo07group.squad6,Human,3,12,0,0,1,5,1,1,1,1
+squad6,edu.nwmissouri.zoo07group.squad6,SoftwaredevGroup,58,0,0,0,18,0,4,0,4,0
+squad6,edu.nwmissouri.zoo07group.squad6,ZooDirector,21,32,0,0,9,10,6,5,6,5
